@@ -1,0 +1,15 @@
+{
+  "name": "vitest-trace-on-first-retry-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:off": "TRACE_MODE=off vitest run",
+    "test:debug": "DEBUG=pw:api vitest run 2>&1 | grep -E 'tracing\\.(start|stop)'"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "5.0.0",
+    "playwright": "1.61.1",
+    "vitest": "5.0.0"
+  }
+}
